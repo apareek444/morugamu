@@ -122,10 +122,27 @@ clock-numbers-algebra
                    '?))
 (puzzle-card (rule '(add
                      (sub
-                      (add 2 5)
-                      4)
-                     (add 2 5))
+                       (add 2 5) 4)
+                       (add 2 5))
                    '?))
-
-
+(puzzle-card (rule '(add
+                     (sub 2 5)
+                     (add 3 6))
+                   '?))
+(puzzle-card (rule '(sub
+                      (add 1 1)
+                      (sub (add 3 6) 7))
+                   '?))
+(puzzle-card (rule '(add
+                      (sub 2 3)
+                      (add 2 4))
+                   '?))
+(puzzle-card (rule '(add
+                     (sub 1 8)
+                     (add 2 (sub 2 3)))
+                   '?))
+(puzzle-card (rule '(sub
+                     2
+                     (add 2 4))
+                   '?))
 
