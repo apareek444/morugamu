@@ -84,7 +84,8 @@ clock-numbers-algebra
 (puzzle-card (rule ' (add (2 6))
                    '?))
 
-(puzzle-card (rule ' (sub (4 5))))
+(puzzle-card (rule ' (sub (4 5))
+                   '?))
 
 (puzzle-card (rule ' (add
                       (sub 1 1)
@@ -145,4 +146,46 @@ clock-numbers-algebra
                      2
                      (add 2 4))
                    '?))
-
+(puzzle-card (rule '(add
+                     (sub 2 3)
+                     (sub 2 3))
+                   '?))
+(puzzle-card (rule '(sub
+                     (add 3 4)
+                     (sub (sub 2 9) (sub 1 3)))
+                   '?))
+(puzzle-card (rule '(sub 0 2)
+                   '?))
+(puzzle-card (rule '(add
+                     (sub
+                      (add 1 4)
+                      (sub 9 2))
+                     (add
+                      (sub 3 6)
+                      (add 1 2)
+                      ))
+                   '?))
+(puzzle-card (rule '(sub
+                     (add 2 2)
+                     (sub 4 4))
+                   '?))
+(puzzle-card (rule '(add
+                     (sub 3 7)
+                     (sub 1 0))
+                   '?))
+(puzzle-card (rule '(add
+                     (sub 3 1)
+                     (add 3 1))
+                   '?))
+(puzzle-card (rule '(add
+                     5
+                     (sub 2 1))
+                   '?))
+(puzzle-card (rule '(sub
+                     6
+                     (sub 2 1))
+                   '?))
+(puzzle-card (rule '(add
+                     (sub 3 3)
+                     2)
+                   '?))
