@@ -96,11 +96,9 @@ clock-numbers-algebra
 
 
 
-;my new puzzle
 #;(puzzle-card (rule (tail (cons T T))
               '?))
 
-;Julia's new puzzles
 (puzzle-card (rule '(add 0 0)
                    '?))
 (puzzle-card (rule '(add 3 7)
@@ -188,4 +186,20 @@ clock-numbers-algebra
 (puzzle-card (rule '(add
                      (sub 3 3)
                      2)
+                   '?))
+(puzzle-card (rule '(add
+                     0
+                     (sub 3 5))
+                   '?))
+(puzzle-card (rule '(sub
+                     0
+                     (add 2 3))
+                   '?))
+(puzzle-card (rule '(sub
+                     (sub 2 1)
+                     (sub 2 3))
+                   '?))
+(puzzle-card (rule '(sub
+                     (add 2 4)
+                     (add 1 3))
                    '?))
