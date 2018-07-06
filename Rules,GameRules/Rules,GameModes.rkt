@@ -8,11 +8,9 @@ Game rules and modes
 
 CONTENTS
 
-Puzzle cards (Easy, Medium, Hard)(Like the one pictured below)
+Game Tiles
 
-@image["./puzzle-example.png"]
-
-Rule Cards(like the one picture below)
+Rule Cards (Like the one pictured below)
 @require[
          (prefix-in bool: "../boolean-algebra-cards.rkt")]
 @require[
@@ -20,7 +18,9 @@ Rule Cards(like the one picture below)
 @define[ba-cards (bool:render bool:theme)]
 @second[ba-cards]
 
-Game Tiles
+Easy, Medium, and Hard Puzzle cards (Like the one pictured below)
+
+@image["./puzzle-example.png"]
 
 @section{Codeoff}
 
