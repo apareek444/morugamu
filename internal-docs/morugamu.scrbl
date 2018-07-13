@@ -137,7 +137,7 @@ cards will often share the same symbols and theme.  Such sets of cards (or "libr
 
 
 
-@defproc[(rule [ruleVar ('(function in) '(function out))])(rule?)]{
+@defproc[(rule)(rule '(Function in) '(Function out))]{
 
  Here’s an example of creating a rule for a rule card
  @racketblock[
@@ -149,7 +149,7 @@ cards will often share the same symbols and theme.  Such sets of cards (or "libr
 }
 
 
-@defproc[(rule-card [rule image?]) (image)]{
+@defproc[(rule-card [rule rule?]) ()]{
 
  Here’s an example of creating a rule card for the boolean algebra card
  @racketblock[
@@ -242,6 +242,9 @@ Individual tiles can be defined using define-tile. Here's an example
 ]
 Tiles are then used in rule cards and puzzles.
 
+@defproc[(puzzle-card [rule rule?])
+         image?]{
+
 TODO: Doc this..
 
 }
@@ -250,7 +253,7 @@ Here's an example of creating a puzzle card
           (puzzle-card ( rule '(< x y) 'T))
 ]
 Note the use of the puzzle-card function. Here's how it works:
-@defproc[(puzzle-card [rule rule?]) (image)]{
+@defproc[(puzzle-card [rule rule?]) ()]{
 
 }
 
@@ -264,11 +267,19 @@ page layouts becomes more and more important.  This section documents the tools 
 these kinds of things.
 
 @defproc[(number-all [list listof image?])
-         (listof image?)]{
+         (listof image?)]{ 
 
 This takes in a list of images (i.e. puzzle cards), and numbers them starting from one.  It produces a list of the same images, each with its corresponding number now placed at the top right corner.                    
 
 }
+
+@defproc[(save-sheets [lst list?] [num number?])
+         ()]{
+
+This funtion uses a list of sheet images and saves them recursively. If number is less than the length of the list, save-image function is called again and the sheet is incremented
+The number is the name of the file name. It lets us save all the image files in order without overwriting the previus ones
+Parameters: List lst, Number num
+Output: void
 
 @defproc[(my-save-image [img image?] [num number?])
          ()]{
